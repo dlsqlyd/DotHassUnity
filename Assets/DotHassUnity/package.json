@@ -1,9 +1,9 @@
 {
   "name": "com.dothass.dothassunity",
-  "displayName": "Dothass unity",
+  "displayName": "Dothass Unity",
   "version": "0.0.1",
   "unity": "2018.3",
-  "description": "dothass unity",
+  "description": "dothass Unity",
   "keywords": [ "framework", "puremvc", "zenject", "mvc" ],
   "category": "",
   "dependencies": {
