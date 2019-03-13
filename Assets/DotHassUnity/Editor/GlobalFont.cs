@@ -8,24 +8,27 @@ using UnityEngine.UI;
 
 namespace DotHass.Unity
 {
-    public class GlobalFont
+    public static class GlobalFont
     {
+        private static FontData data;
+
+
         [InitializeOnLoadMethod]
         private static void InitializeOnLoad()
         {
+            data = FontDataManager.GetFont();
             EditorApplication.hierarchyChanged += ChangeDefaultFont;
         }
 
         private static void ChangeDefaultFont()
         {
-            if (Selection.activeGameObject == null)
+            if (Selection.activeGameObject == null || data == null)
             {
                 return;
             }
             Text text = Selection.activeGameObject.GetComponent<Text>();
             if (text != null)
             {
-                var data = FontDataManager.GetFont();
                 text.font = data.font;
                 text.fontSize = data.fontSize;
                 text.fontStyle = data.fontStyle;

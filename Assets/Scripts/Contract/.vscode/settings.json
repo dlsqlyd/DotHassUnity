@@ -1,0 +1,9 @@
+{
+    "protoc": {
+        "path": "D:/Application/protoc/bin/protoc.exe",
+        "options": [
+            "--proto_path=protos",
+            "--csharp_out=csharp"
+        ]
+    }
+}
